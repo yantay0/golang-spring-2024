@@ -13,7 +13,13 @@ import (
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	log.Println("entering health check endpoint")
 	w.WriteHeader(http.StatusOK)
+
+	appName := "go-rest-api about cats for Tsis-1\nGolang application development,Spring 2024"
+	author := "yantay0"
+
 	fmt.Fprintf(w, "Server is up and running on 8080\n")
+	fmt.Fprintf(w, "About app: %s\n", appName)
+	fmt.Fprintf(w, "Author: %s\n", author)
 }
 
 func GetCats(w http.ResponseWriter, r *http.Request) {
