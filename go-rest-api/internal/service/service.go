@@ -9,7 +9,6 @@ func GetCats() []model.Cat {
 	cats := catRepository.PrepareResponse()
 	return cats
 }
-
 func GetCat(id string) model.Cat {
 	cats := catRepository.PrepareResponse()
 	var cat model.Cat
